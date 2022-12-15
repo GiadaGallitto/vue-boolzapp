@@ -30,19 +30,23 @@
                                             <img class="w-100" src="./img/avatar_io.jpg" alt="my avatar">
                                         </div>
                                         <div class="my-name fs-6 ps-2 pt-3 d-inline-block">
-                                            <p>Jade</p>
+                                            <p class="fw-semibold">Jade</p>
                                         </div>
                                     </div>
                                     <div class="col-4 pt-3 text-end">
                                         <i class="fa-sharp fa-solid fa-circle-notch"></i>
+                                        <i class="fa-solid fa-message"></i>
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 advisor border border-primary d-flex">
-                                <div class="bell-icon"></div>
+                                <div class="bell-icon">
+                                    <i class="fa-solid fa-bell-slash"></i>
+                                </div>
                                 <div class="text-advisor">
-                                    <p>Ricevi notifiche di nuovi messaggi</p>
-                                    <span>Attiva notifiche desktop</span>
+                                    <p class="fs-6 fw-semibold">Ricevi notifiche di nuovi messaggi</p>
+                                    <span class="text-secondary">Attiva notifiche desktop</span>
                                 </div>
                             </div>
                             <div class="col-12 search py-1 border border-primary">
@@ -55,7 +59,7 @@
                             <div v-for="(element, chatIndex) in contacts" @click="openNewChat(chatIndex)" class="col-12 contact border border-danger d-flex">
                                 <img class="contact-icon" :src="`./img/avatar${element.avatar}.jpg `" alt="avatar img">
                                 <div class="contact-details pt-3 ps-3">
-                                    <p>{{element.name}}</p>
+                                    <p class="fw-semibold">{{element.name}}</p>
                                     <span>Ultimo messaggio</span>
                                 </div>
                             </div>
@@ -71,7 +75,7 @@
                                             <img class="w-100" :src="`./img/avatar${contacts[contactIndex].avatar}.jpg `" alt="my avatar">
                                         </div>
                                         <div class="my-name fs-6 ps-2 pt-3 d-inline-block">
-                                            <p>
+                                            <p class="fw-semibold">
                                                 {{contacts[contactIndex].name}} 
                                             </p>
                                         </div>

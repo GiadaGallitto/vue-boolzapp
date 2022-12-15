@@ -23,6 +23,13 @@ main{
     width: 35%;
 }
 
+.contacts-part i{
+    font-size: 1.2rem;
+    color: #b1b1b1;
+    padding-top: 0.2rem;
+    padding-right: 1rem;
+}
+
 .contacts-part .profile-tools,
 .chat-part .active-chat-tools{
     background-color: #eaeaea;
@@ -46,13 +53,29 @@ main{
     border-radius: 50%;
 }
 
-
 .contacts-part .advisor{
     background-color: #8edafc;
 }
 
+.advisor .bell-icon{
+    padding: 1rem 0.6rem 1rem 0.6rem;
+}
+
+.bell-icon i{
+    color: #8edafc;
+    background-color: white;
+    border-radius: 50%;
+    padding: 0.7rem 0.6rem;
+}
+
 .advisor .text-advisor{
+    line-height: 0.7rem;
+    padding: 1rem 0;
+}
+
+.text-advisor span{
     font-size: 0.8rem;
+    text-decoration: underline;
 }
 
 .contact-icon{
