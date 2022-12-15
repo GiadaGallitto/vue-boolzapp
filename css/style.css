@@ -35,6 +35,13 @@ main{
     padding-top: 0.5rem;
 }
 
+.chat-part .icon-container{
+    width: 25%;
+    border-radius: 50%;
+    overflow: hidden;
+    padding-top: 0.5rem;
+}
+
 .icon-container img{
     border-radius: 50%;
 }
@@ -60,10 +67,10 @@ main{
     width: 65%;
 }
 
-/* Width temporanea */
+/* Width temporanea
 .chat-part img{
     width: 24%;
-}
+} */
 
 .chat-screen{
     background-image: url(../img/mine.jpg);

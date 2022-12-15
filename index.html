@@ -34,7 +34,7 @@
                                         </div>
                                     </div>
                                     <div class="col-4 pt-3 text-end">
-                                        icone
+                                        <i class="fa-sharp fa-solid fa-circle-notch"></i>
                                     </div>
                                 </div>
                             </div>
@@ -63,13 +63,14 @@
                     </section>
     
                     <section class="chat-part h-100 border border-dark container">
-                        <!-- Deve apparire il nome e l'img dell'utente scelto -->
                         <div class="row position-relative">
                             <div class="col-12 active-chat-tools border border-primary">
-                                <div v-for="(element, chatIndex) in contacts" class="row justify-content-between">
+                                <div class="row justify-content-between">
                                     <div class="col-3 py-2">
-                                        <img :src="`./img/avatar${element.avatar}.jpg `" alt="my avatar">
-                                        <span class="fs-6 pt-1 ps-2"> {{element.name}} </span>
+                                        <div class="icon-container h-100 d-inline-block">
+                                            <img class="w-100" :src="`./img/avatar${contacts[contactIndex].avatar}.jpg `" alt="my avatar">
+                                        </div>
+                                        <span class="fs-6 pt-1 ps-2"> {{contacts[contactIndex].name}} </span>
                                     </div>
                                     <div class="col-4 pt-3 text-end">
                                         icone
@@ -90,7 +91,7 @@
 
                         <div class="row writing-part">
                             <div class="col-12 h-100 d-flex justify-content-between pt-2">
-                                <div class="emoticons d-inline-block">:) </div>
+                                <div class="emoticons d-inline-block"> {{contactIndex}} </div>
                                 <input class="w-75 h-75" type="text" placeholder="Scrivi un messaggio">
                                 <div class="share">icon</div>
                             </div>
