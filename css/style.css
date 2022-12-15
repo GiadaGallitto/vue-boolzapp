@@ -23,7 +23,8 @@ main{
     width: 35%;
 }
 
-.contacts-part .profile-tools{
+.contacts-part .profile-tools,
+.chat-part .active-chat-tools{
     background-color: #eaeaea;
 }
 
@@ -47,4 +48,19 @@ main{
 
 .chat-part{
     width: 65%;
+}
+
+/* Width temporanea */
+.chat-part img{
+    width: 24%;
+}
+
+.chat-screen{
+    background-image: url(../img/mine.jpg);
+    background-size: contain;
+    height: 85%;
+}
+
+.writing-part{
+    height: 7%;
 }
