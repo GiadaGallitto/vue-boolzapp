@@ -57,6 +57,14 @@ main{
     background-color: #8edafc;
 }
 
+.contacts-part .search{
+    background-color: #fafafa;
+}
+
+.search .input-group{
+    border-color: #dcdcdc;
+}
+
 .advisor .bell-icon{
     padding: 1rem 0.6rem 1rem 0.6rem;
 }

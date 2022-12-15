@@ -40,7 +40,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 advisor border border-primary d-flex">
+                            <div class="col-12 advisor d-flex">
                                 <div class="bell-icon">
                                     <i class="fa-solid fa-bell-slash"></i>
                                 </div>
@@ -49,14 +49,18 @@
                                     <span class="text-secondary">Attiva notifiche desktop</span>
                                 </div>
                             </div>
-                            <div class="col-12 search py-1 border border-primary">
-                                <div class="search-icon d-inline-block">icona</div>
-                                <input class="w-75" type="text" placeholder="Cerca o inizia una nuova chat">
+                            <div class="col-12 search py-1">
+                                <div class="input-group">
+                                    <div class="input-group-text search-icon bg-white ps-3">
+                                        <i class="fa-solid fa-magnifying-glass ps-3"></i>
+                                    </div>
+                                    <input type="text" class="form-control w-75" placeholder="Cerca o inizia una nuova chat">
+                                </div>
                             </div>
                         </div>
 
                         <div class="row contacts-thumbs position-relative">
-                            <div v-for="(element, chatIndex) in contacts" @click="openNewChat(chatIndex)" class="col-12 contact border border-danger d-flex">
+                            <div v-for="(element, chatIndex) in contacts" @click="openNewChat(chatIndex)" class="col-12 contact d-flex">
                                 <img class="contact-icon" :src="`./img/avatar${element.avatar}.jpg `" alt="avatar img">
                                 <div class="contact-details pt-3 ps-3">
                                     <p class="fw-semibold">{{element.name}}</p>
