@@ -46,8 +46,8 @@
 
                         <div class="row contacts-thumbs position-relative">
                             <div v-for="element in contacts" class="col-12 contact border border-danger d-flex">
-                                <img class="w-25" :src="`avatar${element.avatar}.jpg `" alt="avatar img">
-                                <div class="contact-details">
+                                <img class="contact-icon" :src="`./img/avatar${element.avatar}.jpg `" alt="avatar img">
+                                <div class="contact-details pt-3 ps-3">
                                     <p>{{element.name}}</p>
                                     <span>Ultimo messaggio</span>
                                 </div>
