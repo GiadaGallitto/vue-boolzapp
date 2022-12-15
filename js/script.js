@@ -169,5 +169,10 @@ createApp({
             ]
             
         }
+    },
+    methods: {
+        openNewChat(chatIndex){
+            this.contactIndex = chatIndex;
+        }
     }
 }).mount(`#app`)

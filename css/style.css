@@ -28,7 +28,17 @@ main{
     background-color: #eaeaea;
 }
 
-/* Aggiungere in seguito border radius a img di profile */
+.contacts-part .icon-container{
+    width: 45%;
+    border-radius: 50%;
+    overflow: hidden;
+    padding-top: 0.5rem;
+}
+
+.icon-container img{
+    border-radius: 50%;
+}
+
 
 .contacts-part .advisor{
     background-color: #8edafc;
@@ -66,10 +76,14 @@ main{
 }
 
 .sent{
-    background-color: green;
+    background-color: #d5f9ba;
+    padding: 1rem;
+    border-radius: 10px;
 }
 
 .received{
-    background-color: grey;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 10px;
     align-self: flex-start;
 }
