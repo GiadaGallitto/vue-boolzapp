@@ -66,10 +66,10 @@
                         <!-- Deve apparire il nome e l'img dell'utente scelto -->
                         <div class="row position-relative">
                             <div class="col-12 active-chat-tools border border-primary">
-                                <div class="row justify-content-between">
+                                <div v-for="(element, chatIndex) in contacts" class="row justify-content-between">
                                     <div class="col-3 py-2">
-                                        <img class="" src="./img/avatar_io.jpg" alt="my avatar">
-                                        <span class="fs-6 pt-1 ps-2">Jade</span>
+                                        <img :src="`./img/avatar${element.avatar}.jpg `" alt="my avatar">
+                                        <span class="fs-6 pt-1 ps-2"> {{element.name}} </span>
                                     </div>
                                     <div class="col-4 pt-3 text-end">
                                         icone
@@ -80,7 +80,7 @@
 
                         <div class="row chat-screen position-relative">
                             <div class="col-12 h-100 pt-5">
-                                <div v-for="(element, index) in contacts[contactIndex].messages " class="container w-75 m-auto">
+                                <div v-for="(element, index) in contacts[contactIndex].messages" class="container w-75 m-auto">
                                     <div class="row flex-column align-items-end">
                                         <div class="col-5 mb-3" :class="element.status"> {{element.message}} </div>
                                     </div>
