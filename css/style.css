@@ -64,3 +64,12 @@ main{
 .writing-part{
     height: 7%;
 }
+
+.sent{
+    background-color: green;
+}
+
+.received{
+    background-color: grey;
+    align-self: flex-start;
+}

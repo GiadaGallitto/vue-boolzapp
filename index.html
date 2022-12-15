@@ -74,8 +74,8 @@
                             <div class="col-12 h-100">
                                 <div v-for="(element, index) in contacts[contactIndex].messages " class="container w-75 m-auto bg-info">
                                     <!-- Devo fare in modo che se il messaggio ha come status: send, mi crei una row con le proprie caratteristiche e classi -->
-                                    <div class="row border border-dark">
-                                        <div class="col-5 border border-dark"> {{element.status}} </div>
+                                    <div class="row border border-dark flex-column align-items-end">
+                                        <div class="col-5 border border-dark" :class="element.status"> {{element.message}} </div>
                                     </div>
                                     <!-- Se invece è status: received, abbia altre caratteristiche e classi -->
                                 </div>
