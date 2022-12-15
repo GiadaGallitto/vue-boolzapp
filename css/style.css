@@ -23,6 +23,20 @@ main{
     width: 35%;
 }
 
+.contacts-part .profile-tools{
+    background-color: #eaeaea;
+}
+
+/* Aggiungere in seguito border radius a img di profile */
+
+.contacts-part .advisor{
+    background-color: #8edafc;
+}
+
+.advisor .text-advisor{
+    font-size: 0.8rem;
+}
+
 .chat-part{
     width: 65%;
 }
