@@ -211,7 +211,7 @@ createApp({
             if(!this.activeMenu){
                 this.activeMenu = index
             } else {
-                this.activeMenu = false
+                this.activeMenu = null
             }
             // Risolvere rimozione drop menu del primo messaggio non consentita
         },

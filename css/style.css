@@ -129,6 +129,18 @@ main{
     height: 85%;
 }
 
+.chat-part .drop-menu{
+    padding: 1rem;
+    cursor: pointer;
+    width: 170px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 4;
+    position: absolute;
+    top: 40%;
+    right: 5%;
+}
+
 .writing-part{
     height: 7%;
 }
