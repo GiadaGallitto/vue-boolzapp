@@ -4,6 +4,7 @@ createApp({
     data() {
         return{
             contactIndex: 0,
+            newMessageElement: " ",
             contacts: [
                 {
                     name: 'Michele',
@@ -173,6 +174,19 @@ createApp({
     methods: {
         openNewChat(chatIndex){
             this.contactIndex = chatIndex;
+        },
+
+        addNewUserMessage(content){
+            if(content != ""){
+                this.contacts[contactIndex].messages.push({
+                    message : content, status : "sent"
+                })
+            };
+            this.clearInput()
+        },
+
+        clearInput(){
+            this.newMessageElement = " ";
         }
     }
 }).mount(`#app`)
