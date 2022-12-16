@@ -99,7 +99,7 @@
                         <div class="row chat-screen position-relative">
                             <div class="col-12 h-100 pt-5">
                                 <!-- Dopo aver creato il dropdown menu, faccio in modo che al click venga mostrato (activeMenu=true) -->
-                                <div v-for="(element, index) in contacts[contactIndex].messages" @mouseover="showDropdownMenu(index)" @mouseleave="removeDropdownMenu(index) " class="message container w-75 m-auto">
+                                <div v-for="(element, index) in contacts[contactIndex].messages" @click="showDropdownMenu(index)" class="message container w-75 m-auto">
                                     <div class="row flex-column align-items-end">
                                         <div class="col-5 mb-3" :class="element.status"> {{element.message}} 
                                             <div class="drop-menu" v-show="activeMenu === index">

@@ -210,13 +210,10 @@ createApp({
         showDropdownMenu(index){
             if(!this.activeMenu){
                 this.activeMenu = index
-            }
-        },
-
-        removeDropdownMenu(index){
-            if(this.activeMenu = index){
+            } else {
                 this.activeMenu = false
             }
+            // Risolvere rimozione drop menu del primo messaggio non consentita
         },
 
         removeMessage(index){
