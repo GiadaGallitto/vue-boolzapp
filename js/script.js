@@ -210,9 +210,17 @@ createApp({
         showDropdownMenu(index){
             if(!this.activeMenu){
                 this.activeMenu = index
-            } else {
+            }
+        },
+
+        removeDropdownMenu(index){
+            if(this.activeMenu = index){
                 this.activeMenu = false
             }
+        },
+
+        removeMessage(index){
+            this.contacts[this.contactIndex].messages.splice(index, 1);
         }
     }
 }).mount(`#app`)
