@@ -28,7 +28,8 @@ main{
 }
 
 .contacts-part i,
-.chat-part i{
+.active-chat-tools i,
+.writing-part i{
     font-size: 1.2rem;
     color: #b1b1b1;
     padding-top: 0.2rem;
@@ -137,8 +138,21 @@ main{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     z-index: 4;
     position: absolute;
-    top: 40%;
-    right: 5%;
+    top: 55%;
+    right: 3%;
+}
+
+.sent .fa-chevron-down{
+    color: #d5f9ba;
+}
+
+.received .fa-chevron-down{
+    color: white;
+}
+
+.message:hover .fa-chevron-down{
+    color: #adadad;
+    cursor: pointer;
 }
 
 .writing-part{

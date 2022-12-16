@@ -81,7 +81,7 @@
                                         <div class="icon-container h-100 d-inline-block">
                                             <img class="w-100" :src="`./img/avatar${contacts[contactIndex].avatar}.jpg `" alt="contact avatar">
                                         </div>
-                                        <div class="my-name fs-6 ps-2 pt-3 d-inline-block">
+                                        <div class="contact-name fs-6 ps-2 pt-3 d-inline-block">
                                             <p class="fw-semibold">
                                                 {{contacts[contactIndex].name}} 
                                             </p>
@@ -99,9 +99,11 @@
                         <div class="row chat-screen position-relative">
                             <div class="col-12 h-100 pt-5">
                                 <!-- Dopo aver creato il dropdown menu, faccio in modo che al click venga mostrato (activeMenu=true) -->
-                                <div v-for="(element, index) in contacts[contactIndex].messages" @click="showDropdownMenu(index)" class="message container w-75 m-auto">
+                                <div v-for="(element, index) in contacts[contactIndex].messages" class="message container w-75 m-auto">
                                     <div class="row flex-column align-items-end">
-                                        <div class="col-5 mb-3 position-relative" :class="element.status"> {{element.message}} 
+                                        <div class="col-6 d-flex justify-content-between mb-3 position-relative message" :class="element.status"> 
+                                            {{element.message}}
+                                            <i @click="showDropdownMenu(index)" class="fa-solid fa-chevron-down d-inline-block pe-0"></i>
                                             <div class="drop-menu" v-show="activeMenu === index">
                                                 <div @click="removeMessage(index)" class="drop-item">Elimina messaggio</div>
                                             </div>
