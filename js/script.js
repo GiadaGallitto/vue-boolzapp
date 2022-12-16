@@ -208,7 +208,11 @@ createApp({
         },
 
         showDropdownMenu(index){
-            this.activeMenu = index
+            if(!this.activeMenu){
+                this.activeMenu = index
+            } else {
+                this.activeMenu = false
+            }
         }
     }
 }).mount(`#app`)
