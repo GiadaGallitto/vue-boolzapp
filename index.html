@@ -21,7 +21,7 @@
             </header>
 
             <main class="d-flex">
-                    <section class="contacts-part h-100 border border-dark container">
+                    <section class="contacts-part h-100 container">
                         <div class="row upper-part position-relative">
                             <div class="col-12 profile-tools">
                                 <div class="row justify-content-between">
@@ -52,7 +52,9 @@
                             <div class="col-12 search py-1">
                                 <div class="input-group">
                                     <div class="input-group-text search-icon bg-white ps-3">
-                                        <i class="fa-solid fa-magnifying-glass ps-3"></i>
+                                        <button class="border-0 bg-white">
+                                            <i class="fa-solid fa-magnifying-glass ps-3"></i>
+                                        </button>
                                     </div>
                                     <input type="text" class="form-control w-75" placeholder="Cerca o inizia una nuova chat">
                                 </div>
@@ -60,17 +62,18 @@
                         </div>
 
                         <div class="row contacts-thumbs position-relative">
-                            <div v-for="(element, chatIndex) in contacts" @click="openNewChat(chatIndex)" class="col-12 contact d-flex">
+                            <div v-for="(element, chatIndex) in contacts" @click="openNewChat(chatIndex)" class="col-12 contact py-2 d-flex">
                                 <img class="contact-icon" :src="`./img/avatar${element.avatar}.jpg `" alt="avatar img">
-                                <div class="contact-details pt-3 ps-3">
+                                <div class="contact-details py-2 ps-3">
                                     <p class="fw-semibold">{{element.name}}</p>
-                                    <span>Ultimo messaggio</span>
+                                    <span>Ultimo messaggio inviato</span>
+                                    <!-- Da inserire ultimo orario e messaggio di invio accanto -->
                                 </div>
                             </div>
                         </div>
                     </section>
     
-                    <section class="chat-part h-100 border border-dark container">
+                    <section class="chat-part h-100 container">
                         <div class="row position-relative">
                             <div class="col-12 active-chat-tools">
                                 <div class="row justify-content-between">
@@ -85,7 +88,9 @@
                                         </div>
                                     </div>
                                     <div class="col-4 pt-3 text-end">
-                                        icone
+                                        <i class="fa-solid fa-magnifying-glass ps-3"></i>
+                                        <i class="fa-solid fa-paperclip"></i>
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
                                     </div>
                                 </div>
                             </div>
@@ -102,10 +107,14 @@
                         </div>
 
                         <div class="row writing-part">
-                            <div class="col-12 h-100 d-flex justify-content-between pt-2">
-                                <div class="emoticons d-inline-block"> {{contactIndex}} </div>
-                                <input class="w-75 h-75" type="text" placeholder="Scrivi un messaggio">
-                                <div class="share">icon</div>
+                            <div class="col-12 h-100 d-flex pt-2">
+                                <div class="emoticons">
+                                    <i class="fa-regular fa-face-smile fs-4 px-4"></i>
+                                </div>
+                                <input type="text" class="ms-2 form-control" placeholder="Scrivi un messaggio">
+                                <div class="share">
+                                    <i class="fa-solid fa-microphone fs-4 ps-4 ms-2"></i>
+                                </div>
                             </div>
                         </div>
                     </section>

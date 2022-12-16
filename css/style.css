@@ -23,7 +23,8 @@ main{
     width: 35%;
 }
 
-.contacts-part i{
+.contacts-part i,
+.chat-part i{
     font-size: 1.2rem;
     color: #b1b1b1;
     padding-top: 0.2rem;
@@ -33,6 +34,10 @@ main{
 .contacts-part .profile-tools,
 .chat-part .active-chat-tools{
     background-color: #eaeaea;
+}
+
+.contacts-part .profile-tools{
+    border-right: 1px solid #cccaca;
 }
 
 .contacts-part .icon-container{
@@ -49,7 +54,8 @@ main{
     padding-top: 0.5rem;
 }
 
-.icon-container img{
+.icon-container img,
+.contact-icon{
     border-radius: 50%;
 }
 
@@ -86,22 +92,32 @@ main{
     text-decoration: underline;
 }
 
+.contacts-thumbs .contact{
+    border-bottom: 1px solid #e4e2e2;
+}
+
+.contacts-thumbs .contact:hover{
+    background-color: #e9ebeb;
+    cursor: pointer;
+}
+
 .contact-icon{
-    width: 15%;
+    width: 12%;
 }
 
 .contact-details{
-    line-height: 0.6rem;
+    line-height: 0.3rem;
+}
+
+.contact-details span{
+    font-size: 0.8rem;
+    color: #adadad;
 }
 
 .chat-part{
     width: 65%;
+    background-color: #f3eeea;
 }
-
-/* Width temporanea
-.chat-part img{
-    width: 24%;
-} */
 
 .chat-screen{
     background-image: url(../img/mine.jpg);
@@ -111,6 +127,17 @@ main{
 
 .writing-part{
     height: 7%;
+}
+
+.writing-part input{
+    height: 85%;
+    margin-top: 0.2rem;
+    width: 82%;
+}
+
+.writing-part i{
+    padding-top: 0.9rem;
+    color: #6b7376;
 }
 
 .sent{
