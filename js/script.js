@@ -180,7 +180,7 @@ createApp({
         addNewUserMessage(content){
             if(content != null && content != " "){
                 this.contacts[this.contactIndex].messages.push({
-                    data: "12:00", message : content, status : "sent"
+                    date: "12:00", message : content, status : "sent"
                 })
             };
             this.clearInput()
@@ -188,6 +188,14 @@ createApp({
 
         clearInput(){
             this.newMessageElement = " ";
+        },
+        
+        newContactMessage(){
+            setTimeout(() => {
+                this.contacts[this.contactIndex].messages.push({
+                    date: "12:30", message : "ok", status : "received"
+                })
+            }, 1000)
         }
     }
 }).mount(`#app`)
