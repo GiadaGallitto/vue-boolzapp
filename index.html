@@ -56,13 +56,13 @@
                                             <i class="fa-solid fa-magnifying-glass ps-3"></i>
                                         </button>
                                     </div>
-                                    <input type="text" class="form-control w-75" placeholder="Cerca o inizia una nuova chat">
+                                    <input @keyup.enter="nameContactResearch(inputText)" v-model="inputText" type="text" class="form-control w-75" placeholder="Cerca o inizia una nuova chat">
                                 </div>
                             </div>
                         </div>
 
                         <div class="row contacts-thumbs position-relative">
-                            <div v-for="(element, chatIndex) in contacts" @click="openNewChat(chatIndex)" class="col-12 contact py-2 d-flex">
+                            <div v-for="(element, chatIndex) in contacts" v-show="element.visible" @click="openNewChat(chatIndex)" class="col-12 contact py-2 flex">
                                 <img class="contact-icon" :src="`./img/avatar${element.avatar}.jpg `" alt="avatar img">
                                 <div class="contact-details py-2 ps-3">
                                     <p class="fw-semibold">{{element.name}}</p>

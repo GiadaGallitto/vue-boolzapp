@@ -196,6 +196,18 @@ createApp({
                     date: "12:30", message : "ok", status : "received"
                 })
             }, 1000)
+        },
+
+        nameContactResearch(inputText){
+            this.contacts.forEach(contact => {
+                // let nameList = contact.name.split(``)
+                // let nameSearch = inputText.split(``)
+                if(contact.name.toLowerCase().includes(inputText)){
+                    contact.visible = true
+                } else {
+                    contact.visible = false
+                }
+            });
         }
     }
 }).mount(`#app`)
