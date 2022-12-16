@@ -209,8 +209,10 @@ createApp({
             });
         },
 
-        showDropdownMenu(){
-            this.activeMenu = !this.activeMenu;
+        showDropdownMenu(element){
+            if(element.status === "sent"){
+                this.activeMenu = !this.activeMenu;
+            }
         }
     }
 }).mount(`#app`)
