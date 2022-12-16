@@ -5,6 +5,7 @@ createApp({
         return{
             contactIndex: 0,
             fromTimeWindow: "Scrivi un messaggio",
+            activeMenu: false,
             newMessageElement: null,
             contacts: [
                 {
@@ -200,14 +201,16 @@ createApp({
 
         nameContactResearch(inputText){
             this.contacts.forEach(contact => {
-                // let nameList = contact.name.split(``)
-                // let nameSearch = inputText.split(``)
                 if(contact.name.toLowerCase().includes(inputText)){
                     contact.visible = true
                 } else {
                     contact.visible = false
                 }
             });
+        },
+
+        showDropdownMenu(){
+            this.activeMenu = !this.activeMenu;
         }
     }
 }).mount(`#app`)

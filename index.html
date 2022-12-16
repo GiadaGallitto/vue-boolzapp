@@ -79,7 +79,7 @@
                                 <div class="row justify-content-between">
                                     <div class="col-3 d-flex mb-1">
                                         <div class="icon-container h-100 d-inline-block">
-                                            <img class="w-100" :src="`./img/avatar${contacts[contactIndex].avatar}.jpg `" alt="my avatar">
+                                            <img class="w-100" :src="`./img/avatar${contacts[contactIndex].avatar}.jpg `" alt="contact avatar">
                                         </div>
                                         <div class="my-name fs-6 ps-2 pt-3 d-inline-block">
                                             <p class="fw-semibold">
@@ -98,9 +98,13 @@
 
                         <div class="row chat-screen position-relative">
                             <div class="col-12 h-100 pt-5">
-                                <div v-for="(element, index) in contacts[contactIndex].messages" class="container w-75 m-auto">
+                                <!-- Dopo aver creato il dropdown menu, faccio in modo che al click venga mostrato (activeMenu=true) -->
+                                <div v-for="(element, index) in contacts[contactIndex].messages" @click="showDropdownMenu()" class="message container w-75 m-auto">
                                     <div class="row flex-column align-items-end">
                                         <div class="col-5 mb-3" :class="element.status"> {{element.message}} </div>
+                                        <div class="drop-menu" v-show="activeMenu" >
+                                            <div class="drop-it">Elimina messaggio</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
