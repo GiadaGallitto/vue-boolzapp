@@ -5,7 +5,7 @@ createApp({
         return{
             contactIndex: 0,
             fromTimeWindow: "Scrivi un messaggio",
-            activeMenu: false,
+            activeMenu: null,
             newMessageElement: null,
             contacts: [
                 {
@@ -176,27 +176,25 @@ createApp({
     methods: {
         openNewChat(chatIndex){
             this.contactIndex = chatIndex;
+            this.activeMenu = null;
         },
 
         addNewUserMessage(content){
             if(content != null && content != " "){
                 this.contacts[this.contactIndex].messages.push({
                     date: "12:00", message : content, status : "sent"
-                })
+                });
+                setTimeout(() => {
+                    this.contacts[this.contactIndex].messages.push({
+                        date: "12:30", message : "ok", status : "received"
+                    })
+                }, 1000);
             };
             this.clearInput()
         },
 
         clearInput(){
             this.newMessageElement = " ";
-        },
-        
-        newContactMessage(){
-            setTimeout(() => {
-                this.contacts[this.contactIndex].messages.push({
-                    date: "12:30", message : "ok", status : "received"
-                })
-            }, 1000)
         },
 
         nameContactResearch(inputText){
@@ -209,10 +207,8 @@ createApp({
             });
         },
 
-        showDropdownMenu(element){
-            if(element.status === "sent"){
-                this.activeMenu = !this.activeMenu;
-            }
+        showDropdownMenu(index){
+            this.activeMenu = index
         }
     }
 }).mount(`#app`)

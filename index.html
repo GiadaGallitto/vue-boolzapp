@@ -99,13 +99,14 @@
                         <div class="row chat-screen position-relative">
                             <div class="col-12 h-100 pt-5">
                                 <!-- Dopo aver creato il dropdown menu, faccio in modo che al click venga mostrato (activeMenu=true) -->
-                                <div v-for="(element, index) in contacts[contactIndex].messages" @click="showDropdownMenu(element)" class="message container w-75 m-auto">
+                                <div v-for="(element, index) in contacts[contactIndex].messages" @click="showDropdownMenu(index)" class="message container w-75 m-auto">
                                     <div class="row flex-column align-items-end">
-                                        <div class="col-5 mb-3" :class="element.status"> {{element.message}} </div>
+                                        <div class="col-5 mb-3" :class="element.status"> {{element.message}} 
+                                            <div class="drop-menu" v-show="activeMenu === index">
+                                                <div class="drop-it">Elimina messaggio</div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="drop-menu" v-show="activeMenu">
-                                    <div class="drop-it">Elimina messaggio</div>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +116,7 @@
                                 <div class="emoticons">
                                     <i class="fa-regular fa-face-smile fs-4 px-4"></i>
                                 </div>
-                                <input type="text" v-model.trim="newMessageElement" @keyup.enter="addNewUserMessage(newMessageElement), newContactMessage()" class="ms-2 form-control" :placeholder="fromTimeWindow">
+                                <input type="text" v-model.trim="newMessageElement" @keyup.enter="addNewUserMessage(newMessageElement)" class="ms-2 form-control" :placeholder="fromTimeWindow">
                                 <div class="share">
                                     <i class="fa-solid fa-microphone fs-4 ps-4 ms-2"></i>
                                 </div>
