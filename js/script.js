@@ -4,7 +4,8 @@ createApp({
     data() {
         return{
             contactIndex: 0,
-            newMessageElement: " ",
+            fromTimeWindow: "Scrivi un messaggio",
+            newMessageElement: null,
             contacts: [
                 {
                     name: 'Michele',
@@ -177,9 +178,9 @@ createApp({
         },
 
         addNewUserMessage(content){
-            if(content != ""){
-                this.contacts[contactIndex].messages.push({
-                    message : content, status : "sent"
+            if(content != null && content != " "){
+                this.contacts[this.contactIndex].messages.push({
+                    data: "12:00", message : content, status : "sent"
                 })
             };
             this.clearInput()
