@@ -182,7 +182,7 @@ createApp({
         addNewUserMessage(content){
             if(content != null && content != " "){
                 this.contacts[this.contactIndex].messages.push({
-                    date: "12:00", message : content, status : "sent"
+                    date: `${this.newMessageDate()}`, message : content, status : "sent"
                 });
                 setTimeout(() => {
                     this.contacts[this.contactIndex].messages.push({
@@ -221,8 +221,8 @@ createApp({
         },
 
         newMessageDate(){
-            const dateTime = luxon.DateTime;
-            const currentTime = dateTime.now()
-        }
+            const dateTime = luxon.DateTime.now();
+            console.log(dateTime)
+        },
     }
 }).mount(`#app`)
