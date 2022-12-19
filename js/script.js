@@ -218,6 +218,11 @@ createApp({
 
         removeMessage(index){
             this.contacts[this.contactIndex].messages.splice(index, 1);
+        },
+
+        newMessageDate(){
+            const dateTime = luxon.DateTime;
+            const currentTime = dateTime.now()
         }
     }
 }).mount(`#app`)

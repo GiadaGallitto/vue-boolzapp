@@ -103,6 +103,7 @@
                                     <div class="row flex-column align-items-end">
                                         <div class="col-6 d-flex justify-content-between mb-3 position-relative message" :class="element.status"> 
                                             {{element.message}}
+                                            {{element.date}}
                                             <i @click="showDropdownMenu(index)" class="fa-solid fa-chevron-down d-inline-block pe-0"></i>
                                             <div class="drop-menu" v-show="activeMenu === index">
                                                 <div @click="removeMessage(index)" class="drop-item">Elimina messaggio</div>
