@@ -224,6 +224,7 @@ createApp({
         newMessageDate(){
             const dateTime = luxon.DateTime.now().toLocaleString()
             console.log(dateTime)
+            return dateTime
         },
     }
 }).mount(`#app`)
