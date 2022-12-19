@@ -225,9 +225,14 @@ createApp({
             const date = luxon.DateTime.now().toLocaleString()
             const hourTime = luxon.DateTime.now().hour.toLocaleString()
             const minutesTime = luxon.DateTime.now().minute.toLocaleString()
-            const dateTime = `${date}  ${hourTime}:${minutesTime}`
+            const secondsTime = luxon.DateTime.now().second.toLocaleString()
+            const dateTime = `${date}  ${hourTime}:${minutesTime}:${secondsTime} `
             console.log(dateTime)
             return dateTime
         },
+
+        // theLastOfMessages(){
+        //     for()
+        // }
     }
 }).mount(`#app`)
