@@ -222,9 +222,10 @@ createApp({
         },
 
         newMessageDate(){
+            const date = luxon.DateTime.now().toLocaleString()
             const hourTime = luxon.DateTime.now().hour.toLocaleString()
             const minutesTime = luxon.DateTime.now().minute.toLocaleString()
-            const dateTime = `${hourTime}:${minutesTime}`
+            const dateTime = `${date}  ${hourTime}:${minutesTime}`
             console.log(dateTime)
             return dateTime
         },

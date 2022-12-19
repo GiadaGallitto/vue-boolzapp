@@ -101,9 +101,11 @@
                                 <!-- Dopo aver creato il dropdown menu, faccio in modo che al click venga mostrato (activeMenu=true) -->
                                 <div v-for="(element, index) in contacts[contactIndex].messages" class="message container w-75 m-auto">
                                     <div class="row flex-column align-items-end">
-                                        <div class="col-6 d-flex justify-content-between mb-3 position-relative message" :class="element.status"> 
-                                            {{element.message}}
-                                            {{element.date}}
+                                        <div class="col-6 d-flex justify-content-between mb-3 position-relative message" :class="element.status">
+                                            <div>
+                                                {{element.message}}
+                                                <span class="date-message">{{element.date}}</span>
+                                            </div> 
                                             <i @click="showDropdownMenu(index)" class="fa-solid fa-chevron-down d-inline-block pe-0"></i>
                                             <div class="drop-menu" v-show="activeMenu === index">
                                                 <div @click="removeMessage(index)" class="drop-item">Elimina messaggio</div>
