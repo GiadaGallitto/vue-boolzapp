@@ -62,13 +62,20 @@
                         </div>
 
                         <div class="row contacts-thumbs position-relative">
-                            <div v-for="(element, chatIndex) in contacts" v-show="element.visible" @click="openNewChat(chatIndex)" class="col-12 contact py-2 flex">
-                                <img class="contact-icon" :src="`./img/avatar${element.avatar}.jpg `" alt="avatar img">
-                                <div class="contact-details py-2 ps-3">
-                                    <p class="fw-semibold">{{element.name}}</p>
-                                    <span>Ultimo messaggio inviato</span>
+                            <div v-for="(element, chatIndex) in contacts" v-show="element.visible" @click="openNewChat(chatIndex)" class="col-12 d-flex contact py-2 flex">
+                                <!-- <div class="contact-details d-flex justify-content-between py-2 ps-3"> -->
+                                    <div class="left-contact-details d-flex">
+                                        <img class="contact-icon" :src="`./img/avatar${element.avatar}.jpg `" alt="avatar img">
+                                        <div class="ps-2">
+                                            <p class="fw-semibold">{{element.name}}</p>
+                                            <span>{{theLastOfMessages(element)}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="right-contact-details text-end">
+                                        <span>{{theLastOfMessagesTime(element)}}</span>
+                                    </div>
                                     <!-- Da inserire ultimo orario e messaggio di invio accanto -->
-                                </div>
+                                <!-- </div> -->
                             </div>
                         </div>
                     </section>

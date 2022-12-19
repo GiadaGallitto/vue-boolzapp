@@ -107,16 +107,18 @@ main{
 }
 
 .contact-icon{
-    width: 12%;
+    width: 17%;
 }
 
-.contact-details{
-    line-height: 0.3rem;
+.left-contact-details,
+.right-contact-details{
+    line-height: 1rem;
 }
 
-.contact-details span{
+.right-contact-details span{
     font-size: 0.8rem;
     color: #adadad;
+    line-height: 0.9rem;
 }
 
 .chat-part{

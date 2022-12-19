@@ -231,8 +231,16 @@ createApp({
             return dateTime
         },
 
-        // theLastOfMessages(){
-        //     for()
-        // }
+        theLastOfMessages(element){
+            const lastElement = element.messages.slice(-1)[0];
+            const lastMessage = `${lastElement.message}`
+            return lastMessage
+        },
+
+        theLastOfMessagesTime(element){
+            const lastElement = element.messages.slice(-1)[0];
+            const lastTime = `${lastElement.date}`
+            return lastTime
+        }
     }
 }).mount(`#app`)
