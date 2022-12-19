@@ -187,7 +187,7 @@ createApp({
                 });
                 setTimeout(() => {
                     this.contacts[this.contactIndex].messages.push({
-                        date: "12:30", message : "ok", status : "received"
+                        date: `${this.newMessageDate()}`, message : "ok", status : "received"
                     })
                 }, 1000);
             };
@@ -222,7 +222,9 @@ createApp({
         },
 
         newMessageDate(){
-            const dateTime = luxon.DateTime.now().toLocaleString()
+            const hourTime = luxon.DateTime.now().hour.toLocaleString()
+            const minutesTime = luxon.DateTime.now().minute.toLocaleString()
+            const dateTime = `${hourTime}:${minutesTime}`
             console.log(dateTime)
             return dateTime
         },
