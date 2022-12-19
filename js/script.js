@@ -202,8 +202,10 @@ createApp({
             this.contacts.forEach(contact => {
                 if(contact.name.toLowerCase().includes(inputText)){
                     contact.visible = true
+                    console.log(`true`)
                 } else {
                     contact.visible = false
+                    console.log(`false`)
                 }
             });
         },
@@ -219,6 +221,7 @@ createApp({
 
         removeMessage(index){
             this.contacts[this.contactIndex].messages.splice(index, 1);
+            this.activeMenu = null
         },
 
         newMessageDate(){

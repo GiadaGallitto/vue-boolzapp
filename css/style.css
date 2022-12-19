@@ -107,15 +107,14 @@ main{
 }
 
 .contact-icon{
-    width: 17%;
+    width: 15%;
 }
 
-.left-contact-details,
-.right-contact-details{
-    line-height: 1rem;
+.contact-details{
+    line-height: 0.7rem;
 }
 
-.right-contact-details span{
+.right-contact-infos span{
     font-size: 0.8rem;
     color: #adadad;
     line-height: 0.9rem;
