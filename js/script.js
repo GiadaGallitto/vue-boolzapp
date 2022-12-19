@@ -221,8 +221,8 @@ createApp({
         },
 
         newMessageDate(){
-            const dateTime = luxon.DateTime.now();
-            console.log(dateTime)
+            const dateTime = luxon.DateTime.now().toLocaleString()
+            console.log(newMessageDate())
         },
     }
 }).mount(`#app`)
