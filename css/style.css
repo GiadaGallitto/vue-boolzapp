@@ -97,6 +97,10 @@ main{
     text-decoration: underline;
 }
 
+.contacts-thumbs{
+    overflow-y: auto;
+}
+
 .contacts-thumbs .contact{
     border-bottom: 1px solid #e4e2e2;
 }
@@ -114,6 +118,7 @@ main{
     line-height: 0.7rem;
 }
 
+.left-contact-infos span,
 .right-contact-infos span{
     font-size: 0.8rem;
     color: #adadad;
