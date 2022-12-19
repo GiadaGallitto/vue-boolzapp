@@ -4,6 +4,7 @@ createApp({
     data() {
         return{
             contactIndex: 0,
+            inputText: "",
             fromTimeWindow: "Scrivi un messaggio",
             activeMenu: null,
             newMessageElement: null,
@@ -222,7 +223,7 @@ createApp({
 
         newMessageDate(){
             const dateTime = luxon.DateTime.now().toLocaleString()
-            console.log(newMessageDate())
+            console.log(dateTime)
         },
     }
 }).mount(`#app`)
