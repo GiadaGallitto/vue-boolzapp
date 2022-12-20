@@ -167,6 +167,14 @@ main{
     align-self: flex-start;
 }
 
+.last-message{
+    font-size: 0.9rem;
+}
+
+.last-message .fa-chevron-down{
+    opacity: 0.5%;
+}
+
 .chat-part .drop-menu{
     padding: 1rem;
     cursor: pointer;

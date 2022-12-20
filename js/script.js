@@ -225,8 +225,16 @@ createApp({
 
         // Fuction to delete the message selected with the dropdown menu element
         removeMessage(index){
-            this.contacts[this.contactIndex].messages.splice(index, 1);
-            this.activeMenu = null;
+            if(this.contacts[this.contactIndex].messages.length != 1){
+                this.contacts[this.contactIndex].messages.splice(index, 1);
+                this.activeMenu = null;
+            } else if(this.contacts[this.contactIndex].messages.length = 1) {
+                this.contacts[this.contactIndex].messages.splice(index, 1);
+                this.contacts[this.contactIndex].messages.push({
+                    date: "", message : "Nessun messaggio presente nella chat", status: "last-message"
+                })
+                this.activeMenu = null;
+            }
         },
 
         // Function to show the current date and time of sent and received messages
