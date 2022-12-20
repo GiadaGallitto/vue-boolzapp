@@ -175,11 +175,13 @@ createApp({
         }
     },
     methods: {
+        // Function to open the chat of the selected contact
         openNewChat(chatIndex){
             this.contactIndex = chatIndex;
             this.activeMenu = null;
         },
 
+        // Function to add the new message entered in the input by the user resulting in an automatic reply with time out
         addNewUserMessage(content){
             if(content != null && content != " "){
                 this.contacts[this.contactIndex].messages.push({
@@ -191,58 +193,65 @@ createApp({
                     })
                 }, 1000);
             };
-            this.clearInput()
+            this.clearInput();
         },
 
+        // Function to empty the input after sending the message
         clearInput(){
-            this.newMessageElement = " ";
+            this.newMessageElement = "";
         },
 
+        // Function to search for a contact from the list based on the letter that coincides with one of the contacts in the array
         nameContactResearch(inputText){
             this.contacts.forEach(contact => {
                 if(contact.name.toLowerCase().includes(inputText)){
-                    contact.visible = true
-                    console.log(`true`)
+                    contact.visible = true;
+                    console.log(`true`);
                 } else {
-                    contact.visible = false
-                    console.log(`false`)
-                }
+                    contact.visible = false;
+                    console.log(`false`);
+                };
             });
         },
 
+        // Function to show the dropdown menu of any message on click of chevron-down
         showDropdownMenu(index){
             if(!this.activeMenu){
-                this.activeMenu = index
+                this.activeMenu = index;
             } else {
-                this.activeMenu = null
-            }
+                this.activeMenu = null;
+            };
         },
 
+        // Fuction to delete the message selected with the dropdown menu element
         removeMessage(index){
             this.contacts[this.contactIndex].messages.splice(index, 1);
-            this.activeMenu = null
+            this.activeMenu = null;
         },
 
+        // Function to show the current date and time of sent and received messages
         newMessageDate(){
-            const date = luxon.DateTime.now().toLocaleString()
-            const hourTime = luxon.DateTime.now().hour.toLocaleString()
-            const minutesTime = luxon.DateTime.now().minute.toLocaleString()
-            const secondsTime = luxon.DateTime.now().second.toLocaleString()
-            const dateTime = `${date}  ${hourTime}:${minutesTime}:${secondsTime} `
-            console.log(dateTime)
-            return dateTime
+            const date = luxon.DateTime.now().toLocaleString();
+            const hourTime = luxon.DateTime.now().hour.toLocaleString();
+            const minutesTime = luxon.DateTime.now().minute.toLocaleString();
+            const secondsTime = luxon.DateTime.now().second.toLocaleString();
+            const dateTime = `${date}  ${hourTime}:${minutesTime}:${secondsTime} `;
+            console.log(dateTime);
+            return dateTime;
         },
 
+        // Function to show the latest chat message, whether sent or received, in each contact's inbox
         theLastOfMessages(element){
             const lastElement = element.messages.slice(-1)[0];
-            const lastMessage = `${lastElement.message}`
-            return lastMessage
+            const lastMessage = `${lastElement.message}`;
+            return lastMessage;
         },
 
+        // Function to show in each contact's inbox the date and time of the last chat message, whether sent or received
         theLastOfMessagesTime(element){
             const lastElement = element.messages.slice(-1)[0];
-            const lastTime = `${lastElement.date}`
-            return lastTime
+            const lastTime = `${lastElement.date}`;
+            return lastTime;
         }
     }
 }).mount(`#app`)

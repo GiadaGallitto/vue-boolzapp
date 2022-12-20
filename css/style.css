@@ -1,3 +1,4 @@
+/* GENERAL */
 body{
     background-color: #dcdbd1;
 }
@@ -6,12 +7,16 @@ body{
     display: flex;
 }
 
+/* HEADER */
+
 header{
     width: 100%;
     height: 15vh;
     background-color: #009688;
     position: absolute;
 }
+
+/* MAIN */
 
 main{
     position: relative;
@@ -22,6 +27,8 @@ main{
     z-index: 3;
     background-color: white;
 }
+
+/* CONTACTS LEFT PART OF WEB APP */
 
 .contacts-part{
     width: 35%;
@@ -36,6 +43,7 @@ main{
     padding-right: 1rem;
 }
 
+/* Profile part */
 .contacts-part .profile-tools,
 .chat-part .active-chat-tools{
     background-color: #eaeaea;
@@ -52,28 +60,14 @@ main{
     padding-top: 0.5rem;
 }
 
-.chat-part .icon-container{
-    width: 25%;
-    border-radius: 50%;
-    overflow: hidden;
-    padding-top: 0.5rem;
-}
-
 .icon-container img,
 .contact-icon{
     border-radius: 50%;
 }
 
+/* Advisor part */
 .contacts-part .advisor{
     background-color: #8edafc;
-}
-
-.contacts-part .search{
-    background-color: #fafafa;
-}
-
-.search .input-group{
-    border-color: #dcdcdc;
 }
 
 .advisor .bell-icon{
@@ -97,6 +91,16 @@ main{
     text-decoration: underline;
 }
 
+/* Contacts search part */
+.contacts-part .search{
+    background-color: #fafafa;
+}
+
+.search .input-group{
+    border-color: #dcdcdc;
+}
+
+/* Contacts list part */
 .contacts-thumbs{
     overflow-y: auto;
 }
@@ -111,7 +115,8 @@ main{
 }
 
 .contact-icon{
-    width: 15%;
+    width: 60px;
+    height: 60px;
 }
 
 .contact-details{
@@ -125,16 +130,41 @@ main{
     line-height: 0.9rem;
 }
 
+
+/* CHAT RIGTH PART OF WEB APP */
+
 .chat-part{
     width: 65%;
     background-color: #f3eeea;
 }
 
+/* Contact infos part */
+.chat-part .icon-container{
+    width: 25%;
+    border-radius: 50%;
+    overflow: hidden;
+    padding-top: 0.5rem;
+}
+
+/* Chat screen part and messages */
 .chat-screen{
     background-image: url(../img/mine.jpg);
     background-size: contain;
     height: 85%;
     overflow-y: auto;
+}
+
+.sent{
+    background-color: #d5f9ba;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.received{
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 10px;
+    align-self: flex-start;
 }
 
 .chat-part .drop-menu{
@@ -169,6 +199,7 @@ main{
     color: #6b7376;
 }
 
+/* Writing part */
 .writing-part{
     height: 7%;
 }
@@ -182,17 +213,4 @@ main{
 .writing-part i{
     padding-top: 0.9rem;
     color: #6b7376;
-}
-
-.sent{
-    background-color: #d5f9ba;
-    padding: 1rem;
-    border-radius: 10px;
-}
-
-.received{
-    background-color: #ffffff;
-    padding: 1rem;
-    border-radius: 10px;
-    align-self: flex-start;
 }
